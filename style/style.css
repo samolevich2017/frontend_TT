@@ -93,8 +93,108 @@ body{
     font-family: Poppins-Medium;
 }
 
+/* Блок с меню */
+.block_sidebar-menu{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+}
+
+/* Пункт меню */
+.block_sidebar-menu .sidebar-menu-item{
+    position: relative;
+    height: 65px;
+    padding-left: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Блок с иконкой пункта меню */
+.sidebar-menu-item .menu-item-icon{
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+/* Блок с текстом пункта меню */
+.sidebar-menu-item .menu-item-text{
+    font-size: 16px;
+    font-family: OpenSans;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* ------------------ Иконки ---------------------- */
+.icon-catalog{
+    background: url("../images/menu-icons/catalog.svg");
+}
+
+.icon-health{
+    background: url("../images/menu-icons/health.svg");
+}
+
+.icon-beauty{
+    background: url("../images/menu-icons/beauty.svg");
+}
+
+.icon-enjoy{
+    background: url("../images/menu-icons/enjoy.svg");
+}
+
+.icon-car{
+    background: url("../images/menu-icons/car.svg");
+}
+
+/* ------------------ Иконки и текст при наведении курсора ------------------ */
+.active .menu-item-text,
+.hover .menu-item-text{
+    color: #309DCD;
+}
+
+.active .icon-catalog,
+.hover .icon-catalog {
+    background: url("../images/menu-icons-active/catalog.svg");
+}
+
+.active .icon-health,
+.hover .icon-health{
+    background: url("../images/menu-icons-active/health.svg");
+}
+
+.active .icon-beauty,
+.hover .icon-beauty{
+     background: url("../images/menu-icons-active/beauty.svg");
+}
+
+.active .icon-enjoy,
+.hover .icon-enjoy{
+    background: url("../images/menu-icons-active/enjoy.svg");
+}
+
+.active .icon-car,
+.hover .icon-car{
+    background: url("../images/menu-icons-active/car.svg");
+}
+
+.active:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 50%;
+    width: 3px;
+    background: #309DCD;
+}
+
 /* Подключение шрифтов */
 @font-face {
     font-family: Poppins-Medium;
     src: url("../fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/OpenSans-Regular.ttf");
 }
