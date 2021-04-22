@@ -1,0 +1,100 @@
+html,
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+/* Оболочка */
+.wrapper{
+    height: 100%;
+}
+
+/* Боковое меню */
+.block_sidebar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 240px;
+    height: 100%;
+    background: #F3F4F9;
+    border-radius: 0px;
+}
+
+/* Блок с логотипом */
+.block_logo{
+    position: relative;
+    width: 121px;
+    height: 50px;
+    left: 41px;
+    top: 41px;
+    display: flex;
+    align-items: center;
+}
+
+/* Купон */
+.block_logo .logo-coupon{
+    float: left;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: calc(50% - 50px/2);
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+/* Основной круг купона  */
+.block_logo .logo-coupon .vector-circle{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #34ABE0;
+    overflow: hidden;
+}
+
+/* Блок с процентом внутри купона */
+.vector-circle .vector-percent{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    bottom: 0;
+    right: 25%;
+    z-index: 2;
+    background: url("../images/percent.svg");
+}
+
+/* Блок с лентой купона */
+.vector-circle .vector-tape{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: translate(0px, 45%) rotateZ(45deg);
+    background-color: #F9EED7;
+    z-index: 1;
+}
+
+/* Блок с зубцами */
+.vector-circle .vector-jagged{
+    position: absolute;
+    width: 26px;
+    height: 35px;
+    transform: translate(93.5%, 5%);
+    background: url("../images/jagged.svg") no-repeat;
+}
+
+/* Текст логотипа */
+.logo-text{
+    vert-align: middle;
+    font-size: 16px;
+    font-family: Poppins-Medium;
+}
+
+/* Подключение шрифтов */
+@font-face {
+    font-family: Poppins-Medium;
+    src: url("../fonts/Poppins-Medium.ttf");
+}
