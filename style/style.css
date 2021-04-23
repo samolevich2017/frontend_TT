@@ -179,6 +179,7 @@ body{
     background: url("../images/menu-icons-active/car.svg");
 }
 
+/* Индикатор активности пункта */
 .active:before{
     content: "";
     position: absolute;
@@ -186,6 +187,66 @@ body{
     height: 50%;
     width: 3px;
     background: #309DCD;
+}
+
+/* Основной блок с контентом */
+.main{
+    height: 100%;
+    position: relative;
+    margin-left: 240px;
+    background-color: #fafafa;
+}
+
+/* Блок с формой поиска */
+.block_search{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 120px;
+    background-color: #ffff;
+    padding: 40px 60px;
+}
+
+/* Заголовок страницы, размещен в блоке с формой поиска */
+.block_search .title{
+    font-family: OpenSans;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.block_search .search-form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: OpenSans;
+    height: 50px;
+    font-size: 18px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding: 12px 15px;
+}
+
+.search-form img{
+    position: absolute;
+    left: 16px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.search-form form{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    margin-left: 35px;
+}
+
+.search-form input[type="search"]{
+    width: 100%;
+    line-height: 50px;
+    position: absolute
 }
 
 /* Подключение шрифтов */
