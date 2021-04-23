@@ -4,12 +4,9 @@ body{
     margin: 0;
     height: 100%;
 }
-
-/* Оболочка */
 .wrapper{
     height: 100%;
 }
-
 /* Боковое меню */
 .block_sidebar{
     position: absolute;
@@ -18,7 +15,6 @@ body{
     top: 0;
     bottom: 0;
     width: 240px;
-    height: 100%;
     background: #F3F4F9;
     border-radius: 0px;
 }
@@ -111,6 +107,10 @@ body{
     cursor: pointer;
 }
 
+.block_sidebar-menu .sidebar-menu-item *{
+    transition: all ease-in-out 0.2s;
+}
+
 /* Блок с иконкой пункта меню */
 .sidebar-menu-item .menu-item-icon{
     float: left;
@@ -191,10 +191,10 @@ body{
 
 /* Основной блок с контентом */
 .main{
-    height: 100%;
-    position: relative;
     margin-left: 240px;
     background-color: #fafafa;
+    height: 100%;
+    overflow: auto;
 }
 
 /* Блок с формой поиска */
@@ -270,6 +270,98 @@ body{
     display: none;
 }
 
+/* Блок с каталогом */
+.block_catalog{
+    position: relative;
+    display: grid;
+    padding: 40px 60px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+/* Блок купона */
+.block_coupon{
+    position: relative;
+    height: 124px;
+    max-height: 124px;
+    width: 305px;
+    max-width: 305px;
+    background: #FFFFFF;
+    font-family: Roboto;
+    font-style: normal;
+    border: transparent solid 1px;
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all ease-in-out 0.2s;
+}
+
+.block_coupon:hover{
+    border: #DF212D solid 1px;
+}
+
+/* Верхняя часть купона (заголовок и описание) */
+.coupon-top{
+    position: absolute;
+    z-index: 2;
+}
+
+/* Заголовок купона */
+.block_coupon .coupon-title h2{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Описание купона */
+.coupon-description h3{
+    margin: 4px 0 0 0 ;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+/* Изображение купона */
+.block_coupon .coupon-img{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+/* Нижняя часть купона (скидка/акция/промокод) */
+.coupon-bottom{
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+}
+
+/* Значение скидки/промокода */
+.coupon-bottom .coupon-num{
+    font-weight: bold;
+    font-size: 36px;
+    color: #DF212D;
+    text-transform: uppercase;
+}
+
+/* Лейбл (прокод или скидка) */
+.coupon-bottom .coupon-label{
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+}
+
 /* Подключение шрифтов */
 @font-face {
     font-family: Poppins-Medium;
@@ -279,4 +371,9 @@ body{
 @font-face {
     font-family: OpenSans;
     src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/roboto.regular.ttf");
 }
