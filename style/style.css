@@ -239,14 +239,35 @@ body{
 .search-form form{
     position: relative;
     width: 100%;
-    height: 90%;
     margin-left: 35px;
 }
 
 .search-form input[type="search"]{
     width: 100%;
-    line-height: 50px;
-    position: absolute
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+/* Скроем стандартный крестик для очистки поля поиска */
+/* Explorer */
+.search-form input[type=text]::-ms-clear {
+    display: none;
+    width : 0;
+    height: 0;
+}
+.search-form input[type=text]::-ms-reveal {
+    display: none;
+    width : 0;
+    height: 0;
+}
+
+/* Chrome */
+.search-form input[type="search"]::-webkit-search-decoration,
+.search-form input[type="search"]::-webkit-search-cancel-button,
+.search-form input[type="search"]::-webkit-search-results-button,
+.search-form input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }
 
 /* Подключение шрифтов */
