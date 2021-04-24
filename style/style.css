@@ -28,6 +28,19 @@ body{
     top: 41px;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+/* Бургер для открытия меню */
+.burger{
+    display: none;
+    position: fixed;
+    max-width: 48px;
+    width: 48px;
+    max-height: 106px;
+    height: 106px;
+    background: url("../images/sidebar-union-tablet.svg") no-repeat;
+    z-index: 50;
 }
 
 /* Купон */
@@ -114,7 +127,7 @@ body{
 /* Блок с иконкой пункта меню */
 .sidebar-menu-item .menu-item-icon{
     float: left;
-    width: 24px;
+    min-width: 24px;
     height: 24px;
     margin-right: 15px;
 }
@@ -213,6 +226,8 @@ body{
     font-size: 28px;
     margin-top: 0;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .block_search .search-form{
@@ -298,6 +313,7 @@ body{
     transition: all ease-in-out 0.2s;
 }
 
+
 .block_coupon:hover{
     border: #DF212D solid 1px;
 }
@@ -352,7 +368,7 @@ body{
     text-transform: uppercase;
 }
 
-/* Лейбл (прокод или скидка) */
+/* Лейбл (промокод или скидка) */
 .coupon-bottom .coupon-label{
     font-weight: normal;
     font-size: 16px;
@@ -360,6 +376,55 @@ body{
     text-transform: uppercase;
     color: #000000;
     opacity: 0.5;
+}
+
+/* Style for tablet */
+@media screen and (max-width: 768px){
+
+    .block_sidebar{
+        max-width: 104px;
+        overflow: hidden;
+    }
+
+    .block_logo{
+        left: 0;
+    }
+
+    .block_logo .logo-text,
+    .sidebar-menu-item p{
+        display: none;
+    }
+
+    .burger{
+        display: flex;
+    }
+
+    .main{
+        margin-left: 104px;
+    }
+
+    .block_search{
+        height: 100px;
+    }
+
+    .block_search .title{
+        justify-content: flex-end;
+    }
+
+    .block_catalog{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .block_coupon{
+        max-width: 258px;
+        max-height: 110px;
+    }
+
+    .coupon-top .coupon-title h2,
+    .coupon-top .coupon-description h3{
+        font-size: 14px;
+    }
 }
 
 /* Подключение шрифтов */
